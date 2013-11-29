@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title></title>
+
+<link rel="stylesheet" href="assets/app.css">
+<link rel="stylesheet" href="assets/jquery-ui.css">
+
+<script src="assets/jquery-1.9.1.js"></script>
+<script src="assets/jquery-ui.js"></script>
+
+
+</head>
+
+<body>
+
+
+<div id="home">
+	<div>
+		<div style="margin-top: 42px"><img class="logowatts" src="assets/images/logowatts.png"></div>
+		<div style="margin-top: 30px"><img style="max-width: 258px;" src="assets/images/unamezclaseleccion.png"></div>
+		<div style="margin-top: 40px"><img style="max-width: 87px;" src="assets/images/logostoli.png"></div>
+		<div style="margin-top: 60px" id="btn-menu"><img style="max-width: 162px;" src="assets/images/btnvercocteles.png"></div>
+		<div style="margin-top: 10px" id="btn-autor"><img style="max-width: 200px;" src="assets/images/autor.png"></div>
+	</div>
+</div>
+
+
+<div id="menu">
+	<div>
+		<div style="margin-top: 20px" id="back2home"><img class="logowatts" src="assets/images/logowatts.png"></div>
+		<div style="margin-top: 20px"><img style="max-width: 144px;" src="assets/images/cocteles.png"></div>
+
+		<div style="margin-top: 25px" class="menu-link" id="thai" ><img class="menulink" src="assets/images/thai.png"></div>
+		<div style="margin-top: 12px" class="menu-link" id="guanaja" ><img class="menulink" src="assets/images/guanaja.png"></div>
+		<div style="margin-top: 12px" class="menu-link" id="yellow" ><img class="menulink" src="assets/images/yellow.png"></div>
+		<div style="margin-top: 12px" class="menu-link" id="greco" ><img class="menulink" src="assets/images/greco.png"></div>
+		<div style="margin-top: 12px" class="menu-link" id="sakau" ><img class="menulink" src="assets/images/sakau.png"></div>
+
+		<div style="margin-top: 20px"><img style="max-width: 87px;" src="assets/images/logostoli.png"></div>
+	</div>
+</div>
+
+<div id="pages">
+	<div><img id="title" class="back2menu hd" src=""></div>
+	<div><img id="text"  class="txt" src=""></div>
+	<div><img id="footer" class="hd" src=""></div>
+</div>
+
+<div id="autor">
+	<div><img class="back2home2 hd" src="assets/images/sebasdonoso.png"></div>
+	<div style="margin-top: 5px"><img class="back2home2" style="max-width: 260px;" src="assets/images/fsebasdonoso.png"></div>
+</div>
+  
+<script>
+	var timeOut = 500;
+	var effect = 'drop';
+
+	//Drop
+	//$( this ).effect( "bounce", { times: 1 } );
+
+	$(document).ready(function() {
+		$("#pages, #menu, #autor").hide();
+
+		$('#btn-autor').click(function (e){
+			forward('home', 'autor');	
+		});
+		
+		$('#btn-menu').click(function (e){
+			forward('home', 'menu');	
+		});
+
+		$('#back2home').click(function (e){
+			rewind('menu', 'home');	
+		});
+		
+		$('.menu-link').click(function (e){
+			var page = $(this).attr('id');
+			setPage(page);
+			forward('menu', 'pages');		
+		});	
+		
+		$('.back2menu').click(function (e){
+			rewind('pages', 'menu');	
+		});
+		
+		$('.back2home2').click(function (e){
+			rewind('autor', 'home');	
+		});
+
+	});
+	
+	function setPage(page){
+		 $('#title').attr('src', 'assets/images/t' + page + '.png');
+		 $('#text').attr('src', 'assets/images/r' + page + '.png');
+		 $('#footer').attr('src', 'assets/images/f' + page + '.png');
+	}
+	
+	function rewind(from, to){
+		$( "#" + from ).toggle( effect, { direction: "right" });
+		setTimeout(function(){
+			$( "#" + to ).toggle( effect, { direction: "left" } );
+		},timeOut);
+	}
+
+	function forward(from, to){
+		$( "#" + from ).toggle( effect, { direction: "left" });	
+		setTimeout(function(){
+			$( "#" + to ).toggle( effect, { direction: "right" } );	
+		},timeOut);
+	}
+	
+</script>
+  
+</body>
+</html>
