@@ -5,7 +5,13 @@
 (function(window, angular, undefined) {
   angular.element(document).ready(function() {
     
-    angular.module('Watts', ['controllers', 'ngRoute', 'ngTouch'])
+    angular.module('Watts', [
+      'controllers',
+      'services',
+      'directives',
+      'ngRoute',
+      'ngTouch'
+    ])
       
       .config([
         '$routeProvider',
@@ -19,8 +25,8 @@
           
           $routeProvider
             .when('/', {
-              templateUrl:  'assets/views/fecha_nacimiento.tpl.html',
-              controller:   'FechaNacimientoController',
+              templateUrl:  'assets/views/validar_edad.tpl.html',
+              controller:   'ValidarEdadController',
             })
             .when('/intro_app', {
               templateUrl:  'assets/views/intro_app.tpl.html',
@@ -32,7 +38,7 @@
             })
             .when('/check_fiesta', {
               templateUrl:  'assets/views/check_fiesta.tpl.html',
-              controller:   'GoFiestaController'
+              controller:   'CheckFiestaController'
             })
             .when('/go_fiesta', {
               templateUrl:  'assets/views/go_fiesta.tpl.html',
@@ -46,13 +52,49 @@
               templateUrl:  'assets/views/mis_fiestas.tpl.html',
               controller:   'MisFiestasController'
             })
-            .when('/detalle_fiesta', {
+            .when('/detalle_fiesta/:partyId', {
               templateUrl:  'assets/views/detalle_fiesta.tpl.html',
-              controller:   'DetalleFiestaController'
+              controller:   'DetalleFiestaController',
+              resolve:      {
+                party:      [
+                  'Parties',
+                  '$route',
+                  function(Parties, $route) {
+                    var partyId = $route.current.params.partyId;
+                    var party   = Parties.getPartyById(partyId);
+                    
+                    return party;
+                  }
+                ]
+              }
             })
             .when('/ver_recetario', {
               templateUrl:  'assets/views/ver_recetario.tpl.html',
               controller:   'VerRecetarioController'
+            })
+            .when('/ver_receta/:drinkId', {
+              templateUrl:  'assets/views/ver_receta.tpl.html',
+              controller:   'VerRecetaController',
+              resolve:      {
+                recipe: [
+                  'Recipes',
+                  '$route',
+                  function(Recipes, $route) {
+                    var recipe;
+                    angular.forEach(Recipes.recipes, function(item) {
+                      if (item.drinkId == $route.current.params.drinkId) {
+                        recipe = item;
+                      }
+                    });
+                    
+                    return recipe;
+                  }
+                ]
+              }
+            })
+            .when('/author', {
+              templateUrl:  'assets/views/author.tpl.html',
+              controller:   'AuthorController'
             })
             .otherwise({
               redirectTo: '/'

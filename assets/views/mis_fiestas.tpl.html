@@ -1,7 +1,42 @@
-<div class="mis_fiestas">
-  <h3>Mis Fiestas</h3>
-  <a href="#/detalle_fiesta">Detalle Fiesta 1</a>
-  <a href="#/detalle_fiesta">Detalle Fiesta 2</a>
-  <a href="#/detalle_fiesta">Detalle Fiesta 3</a>
-  <a href="#/intro_app">Volver (Intro)</a>
+<div class="container">
+  <div class="row">
+  	<div class="col-xs-12">
+      Watts | Stoli
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <span>Mis eventos</span>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <ul>
+      	<li data-ng-repeat="party in parties">
+          <div class="row">
+            <div class="col-xs-10">
+              <span>{{party.name}}</span>
+            </div>
+            <div class="col-xs-2">
+              <a href="#/detalle_fiesta/{{party.id}}">
+                <span>icon</span>
+              </a>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      <a href="#/">
+        <span>icon</span>
+        <span>Volver</span>
+      </a>
+    </div>
+  </div>
+  
 </div>

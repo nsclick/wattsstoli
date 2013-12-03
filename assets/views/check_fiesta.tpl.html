@@ -1,5 +1,50 @@
-<div class="armar_fiesta">
-  <h3>Check Fiesta</h3>
-  <a href="#/go_fiesta">Go (Go Fiesta)</a>
-  <a href="#/armar_fiesta">Volver (armar)</a>
+<div class="container">
+  
+  <div class="row">
+  	<div class="col-xs-12 ly2_logo">
+      Watts | Stoli
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <table>
+        <thead>
+          <tr>
+            <th>C&oacute;ctel</td>
+            <th colspan="2">P_ico</td>
+          </tr>
+        </thead>
+        
+        <tbody data-ng-repeat="drinkGroup in drinkGroups">
+          <tr>
+            <td>{{drinkGroup.drink.name}}</td>
+            <td>{{drinkGroup.qty}}</td>
+            <td>
+              <button type="button" data-ng-click="removeDrinkGroupAtIndex($index)">
+                <span>Eliminar</span>
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <button type="button" class="ly3_nav_btn">
+        <span>Vuelve a tus eventos</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <a href="#/go_fiesta" class="ly3_nav_btn">
+        <span>Ir al evento</span>
+      </a>
+    </div>
+  </div>
+  
 </div>

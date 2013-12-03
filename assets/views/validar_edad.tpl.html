@@ -1,0 +1,43 @@
+<div class="container">
+  
+  <div class="row ly1_header">
+    <div class="col-xs-12">
+      Watts | Stoli
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12 ly1_message">
+      PONGA SU FECHA DE NACIMIENTO
+    </div>
+  </div>
+  
+  <div class="row ly1_form">
+    <div class="col-xs-12">
+    
+      <form name="ageForm" data-ng-submit="submitForm()">
+        <div class="form-group">
+          <input type="text" class="form-control" data-ng-model="age" data-ng-change="validateAge()" placeholder="Selecciona tu edad" />
+        </div>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" data-ng-model="agreeWithTerms" data-ng-change="validateAge()" required /> Concuerdo con los t&eacute;rminos de uso de esta aplicaci&oacute;n
+          </label>
+        </div>
+        
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" data-ng-model="rememberMe" data-ng-change="validateAge()" required /> Recordar mi selecci&oacute;n
+          </label>
+        </div>
+        
+        <div class="for-group">
+          <button type="submit" data-ng-disabled="!isValid()">Entrar</button>
+        </div>
+      </form>
+      
+    </div>
+  </div>
+  
+</div>

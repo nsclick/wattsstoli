@@ -1,6 +1,65 @@
-<div class="armar_fiesta">
-  <h3>Armar Fiesta</h3>
-  <a href="#/check_fiesta">Mirar Selecci&oacute;n (Check Fiesta)</a>
-  <a href="#/go_fiesta">Go (Go Fiesta)</a>
-  <a href="#/intro_app">Volver (Intro App)</a>
+<div class="container">
+  <button class="ly2_back">
+    <span>Atr&aacute;s</span>
+  </button>
+  
+  <div class="row ly2_title">
+    <div class="col-xs-12 ly2_logo">
+      Armar fiesta
+    </div>
+  </div>
+  
+  <div class="row ly2_drinks">
+    <div class="col-xs-12">    
+      <ul>
+        <li data-ng-repeat="drink in drinks">
+          <h3>{{drink.name}}</h3>
+          <div class="ly2_drink_image">
+            <img data-ng-src="{{drink.image}}" style="width:100px;height:100px;" />
+          </div>
+          <button type="button" class="ly2_drink_add" data-ng-click="addDrink($index)">
+            <span>Agregar C&oacute;ctel</span>
+          </button>
+        </li>
+      </ul>
+      
+      <span class="ly2_drinks_prev" data-ng-click="showPrevious()">Anterior</span>
+      <span class="ly2_drinks_next" data-ng-click="showNext()">Siguiente</span>
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      
+      <div class="row">
+      	<div class="col-xs-12 ly2_recipes">
+          <a href="#/check_fiesta">
+            <span>Mirar selecci&oacute;n</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="row">
+      	<div class="col-xs-6 ly2_qty">
+          <span>{{party.drinks.length}} cantidad</span>
+        </div>
+        
+      	<div class="col-xs-6 ly2_click">
+          <a href="#/go_fiesta">
+            <span>go fiesta</span>
+          </a>
+        </div>
+      </div>
+      
+      <div class="row">
+        <div class="col-xs-12 ly2_event">
+          <a href="#/intro_app">
+            <span>volver</span>
+          </a>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
 </div>

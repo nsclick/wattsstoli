@@ -1,5 +1,58 @@
-<div class="go_fiesta">
-  <h3>Go Fiesta</h3>
-  <a href="#/go_fiesta_envio">Guardar Fiesta (Go Fiesta)</a>
-  <a href="#/armar_fiesta">Volver (Armar)</a>
+<div class="container">
+  <button type="button" class="ly3_back">
+    <span>Atr&aacute;s</span>
+  </button>
+  
+  <div class="row">
+    <div class="col-xs-12 logo">
+      Watts | Stoli
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12 ly3_message">
+      <span>Vas a necesitar</span>
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <table>
+        <tbody data-ng-repeat="ingredientGroup in ingredientGroups">
+          <tr>
+            <td>{{ingredientGroup.ingredient.Ingredient.name}}</td>
+            <td>{{ingredientGroup.unitsNeeded}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <form>
+        <div class="form-group">        
+          <label for="partyName">NOMBRE FIESTA</label>
+          <input id="partyName" type="text" class="form-control" data-ng-model="party.name" placeholder="Nombre fiesta" data-ng-change="updatePartyName()" />
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <button type="button" class="ly3_nav_btn" data-ng-click="saveParty()">
+        <span>Guardar evento</span>
+      </button>
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12">
+      <a href="#/mis_fiestas" class="ly3_nav_btn">
+        <span>Vuelve a tus eventos</span>
+      </a>
+    </div>
+  </div>
+  
 </div>
