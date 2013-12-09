@@ -39,7 +39,13 @@ body{
 
 .age_input {
   height: 40px;
-  border
+  background-color: #c7be3d;
+  border: 1px solid #f7ec44;
+  font-size: 30px;
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bold;
+  color: #000;
 }
 
 .ly1_message {
@@ -79,10 +85,10 @@ body{
   background-color: #00a800;
   box-shadow: inset 0px 0px 2px 2px #777;
   
-  -webkit-transition: background-color .5s, box-shadow .5s;
+  /*-webkit-transition: background-color .5s, box-shadow .5s;
   -moz-transition: background-color .5s, box-shadow .5s;
   -ms-transition: background-color .5s, box-shadow .5s;
-  transition: background-color .5s, box-shadow .5s;
+  transition: background-color .5s, box-shadow .5s;*/
 }
 
 .age_cb.active .age_cb_box:after {
