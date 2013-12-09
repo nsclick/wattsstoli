@@ -16,9 +16,10 @@
     <div class="col-xs-12">
     
       <form name="ageForm" data-ng-submit="submitForm()">
-        <div class="form-group margin_top_30">
-          <input type="date" data-ng-model="age" min="1913" class="form-control flat" data-ng-change="validateAge()" />
-          <!--<input type="text" class="form-control" data-ng-model="age" data-ng-change="validateAge()" placeholder="Selecciona tu edad" />-->
+        <div class="form-group margin_top_30 row">
+          <div class="col-xs-6 center-block">
+            <input type="date" data-ng-model="age" min="1913" class="age_input form-control" data-ng-change="validateAge()" placeholder="Fecha de Nacimiento" />
+          </div>
         </div>
         
         <div class="form-group margin_top_30">

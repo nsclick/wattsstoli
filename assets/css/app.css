@@ -37,6 +37,10 @@ body{
   margin-top: 30px;
 }
 
+.age_input {
+  height: 40px;
+}
+
 .ly1_message {
   text-align: center;
   font-size: 30px;
@@ -130,4 +134,8 @@ img.menulink{
 .row {
   margin-left: 0px;
   margin-right: 0px;
+}
+
+.col-xs-6.center-block {
+  margin-left: 25%;
 }
