@@ -39,6 +39,7 @@ body{
 
 .age_input {
   height: 40px;
+  border
 }
 
 .ly1_message {
@@ -55,7 +56,7 @@ body{
 
 .age_cb_title {
   position: relative;
-  bottom: 10px;
+  top: -14px;
   padding-left: 20px;
   display: table-cell;
 }
