@@ -1,5 +1,5 @@
 /******************************************************************
- * Layouts
+ * Layout
  ******************************************************************/
 
 html, body {
@@ -11,4 +11,17 @@ body {
   color: #fff;
   font-size: 12px;
   font-size: 1.2rem;
+}
+
+/********************************************
+ * Bootstrap Overriding
+ ********************************************/
+.container {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+.row {
+  margin-left: 0px;
+  margin-right: 0px;
 }

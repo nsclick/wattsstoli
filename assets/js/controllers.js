@@ -8,7 +8,9 @@
     .controller('MainController', [
       '$scope',
       function($scope) {
-        
+        $scope.images = {
+          size: 640
+        };
       }
     ])
     
@@ -21,21 +23,28 @@
       function($scope, $location) {
         $scope.agreeWithTerms = false;
         $scope.rememberMe     = false;
-        $scope.valid          = false;
+        $scope.ageValid       = false;
         
-        $scope.validateAge = function() {
-          console.log('validate');
-          $scope.valid = true;
-          return $scope.valid; // Later replace with real validation
+        $scope.validateAge = function () {
+          var age           = Date.parse($scope.age),
+              allowed       = (18).years().ago(),
+              diff          = allowed.compareTo(age);
+          
+          if (diff >= 0) {
+            $scope.ageValid = true;
+          }
         };
         
-        $scope.isValid = function() {
-          return !!$scope.valid;
+        $scope.submitForm = function () {
+          if ($scope.agreeWithTerms && $scope.ageValid) {
+            if ($scope.rememberMe) {
+              localStorage.setItem('skipAgeValidation', 'skip');
+            }
+            
+            $location.path('/intro_app');
+          }
+          
         };
-        
-        $scope.submitForm = function() {
-          $location.path('/intro_app');
-        }
       }
     ])
     

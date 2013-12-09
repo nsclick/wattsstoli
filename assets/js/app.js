@@ -27,6 +27,16 @@
             .when('/', {
               templateUrl:  'assets/views/validar_edad.tpl.html',
               controller:   'ValidarEdadController',
+              resolve: {
+                skipAgeValidation: [
+                  '$location',
+                  function ($location) {
+                    if (localStorage.getItem('skipAgeValidation') == 'skip') {
+                      $location.path('/intro_app');
+                    }
+                  }
+                ]
+              }
             })
             .when('/intro_app', {
               templateUrl:  'assets/views/intro_app.tpl.html',

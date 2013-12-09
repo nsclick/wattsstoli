@@ -1,12 +1,12 @@
 <div class="container">
   
-  <div class="row ly1_header">
-    <div class="col-xs-12">
-      Watts | Stoli
+  <div class="row ly1_header margin_top_42">
+    <div class="col-xs-12 text-center">
+      <img data-ng-src="assets/images/{{images.size}}/logo_p_{{images.size}}.png" />
     </div>
   </div>
   
-  <div class="row">
+  <div class="row margin_top_30">
     <div class="col-xs-12 ly1_message">
       PONGA SU FECHA DE NACIMIENTO
     </div>
@@ -16,24 +16,35 @@
     <div class="col-xs-12">
     
       <form name="ageForm" data-ng-submit="submitForm()">
-        <div class="form-group">
-          <input type="text" class="form-control" data-ng-model="age" data-ng-change="validateAge()" placeholder="Selecciona tu edad" />
+        <div class="form-group margin_top_30">
+          <input type="date" data-ng-model="age" min="1913" class="form-control flat" data-ng-change="validateAge()" />
+          <!--<input type="text" class="form-control" data-ng-model="age" data-ng-change="validateAge()" placeholder="Selecciona tu edad" />-->
         </div>
         
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" data-ng-model="agreeWithTerms" data-ng-change="validateAge()" required /> Concuerdo con los t&eacute;rminos de uso de esta aplicaci&oacute;n
-          </label>
+        <div class="form-group margin_top_30">
+          <div class="checkbox">
+            <label for="agreeWithTerms" class="terms_agree age_cb" data-toggle-checbox>
+              <span class="age_cb_box"></span>
+              <span class="age_cb_title">Concuerdo con los t&eacute;rminos de uso de esta aplicaci&oacute;n</span>
+            </label>
+            <input type="checkbox" data-ng-model="agreeWithTerms" id="agreeWithTerms" class="hidden" />
+          </div>
         </div>
         
-        <div class="checkbox">
-          <label>
-            <input type="checkbox" data-ng-model="rememberMe" data-ng-change="validateAge()" required /> Recordar mi selecci&oacute;n
-          </label>
+        <div class="form-group margin_top_30">
+          <div class="checkbox">
+            <label for="rememberMe" class="rememberme age_cb" data-toggle-checbox>
+              <span class="age_cb_box"></span>
+              <span class="age_cb_title">Recordar mi selecci&oacute;n</span>
+            </label>
+            <input id="rememberMe" type="checkbox" data-ng-model="rememberMe" class="hidden" />
+          </div>
         </div>
         
-        <div class="for-group">
-          <button type="submit" data-ng-disabled="!isValid()">Entrar</button>
+        <div class="for-group text-center margin_top_30">
+          <button type="submit">
+            <img data-ng-src="assets/images/{{images.size}}/btn_entrar_{{images.size}}.png" />
+          </button>
         </div>
       </form>
       
