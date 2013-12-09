@@ -44,15 +44,16 @@ body{
 }
 
 .age_cb {
-  display: inline-block !important;
-  font-size: 22px;
-  font-size: 2.2rem;
+  display: table !important;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .age_cb_title {
   position: relative;
   bottom: 10px;
   padding-left: 20px;
+  display: table-cell;
 }
 
 .age_cb_box {
