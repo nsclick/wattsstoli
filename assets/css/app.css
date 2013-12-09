@@ -2,13 +2,6 @@
  * WATTS Stylesheet
  *
  *********************************************************/
-* {
-  tap-highlight-color: transparent;
-  -o-tap-highlight-color: transparent;
-  -moz-tap-highlight-color: transparent;
-  -webkit-tap-highlight-color: transparent;
-}
-
 html {
   font-size: 62.5%;
 }
@@ -62,7 +55,7 @@ body{
 
 .age_cb_title {
   position: relative;
-  top: -14px;
+  top: -18px;
   padding-left: 20px;
   display: table-cell;
 }
@@ -149,4 +142,18 @@ img.menulink{
 
 .col-xs-8.center-block {
   margin-left: 16%;
+}
+
+/********************************************
+ * Miscelaneous
+ ********************************************/
+* {
+  tap-highlight-color: transparent;
+  -o-tap-highlight-color: transparent;
+  -moz-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+input:focus, textarea:focus {
+  outline: none;
 }
