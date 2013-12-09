@@ -31,7 +31,8 @@ body{
 }
 
 .age_input {
-  height: 40px;
+  height: 50px;
+  height: 5rem;
   background-color: #c7be3d;
   border: 1px solid #f7ec44;
   font-size: 30px;
@@ -155,5 +156,9 @@ img.menulink{
 }
 
 input:focus, textarea:focus {
+  outline: none;
+}
+
+img {
   outline: none;
 }
