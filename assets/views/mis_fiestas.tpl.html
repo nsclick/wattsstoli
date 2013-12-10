@@ -1,0 +1,41 @@
+<div class="container">
+  <div class="row ly_parties_header margin_top_42">
+    <div class="col-xs-12 text-center">
+      <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
+    </div>
+  </div>
+  
+  <div class="row">
+  	<div class="col-xs-12 text-center ly_parties_title">
+      <img data-ng-src="assets/images/{{images.size}}/menu_events_{{images.size}}.png" />
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12">
+      
+      <table class="ly_parties_table">
+        <tbody data-ng-repeat="party in parties">
+          <tr class="row" data-ng-click="goToParty(party.id)">
+            <td class="ly_parties_name col-xs-10">
+              <span>{{party.name}}</span>
+            </td>
+            <td class="ly_parties_go col-xs-2">
+              <img data-ng-src="assets/images/{{images.size}}/btn_go_{{images.size}}.png"/>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      
+    </div>
+  </div>
+  
+  <div class="row">
+    <div class="col-xs-12 text-center ly_parties_back">
+      <a href="#/intro_app">
+        <img data-ng-src="assets/images/{{images.size}}/btn_back_white_{{images.size}}.png"/>
+      </a>
+    </div>
+  </div>
+  
+</div>
