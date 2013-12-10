@@ -10,7 +10,8 @@
       'services',
       'directives',
       'ngRoute',
-      'ngTouch'
+      'ngTouch',
+      'ngAnimate'
     ])
       
       .config([

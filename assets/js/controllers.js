@@ -90,31 +90,30 @@
       'Drinks',
       'CurrentParty',
       function($scope, Drinks, CurrentParty) {
-        console.log('Check Fiesta');
-        
+      
         $scope.party = CurrentParty;
         $scope.drinkGroups = [];
         
-        // $scope.party.drinks = [
-          // {
-            // id:     4,
-            // name:   'yellow bahía',
-            // image:  'assets/images/fyellow.png',
-            // price:  20
-          // },
-          // {
-            // id:     5,
-            // name:   'sakau mandarin',
-            // image:  'assets/images/fsakau.png',
-            // price:  25
-          // },
-          // {
-            // id:     5,
-            // name:   'sakau mandarin',
-            // image:  'assets/images/fsakau.png',
-            // price:  25
-          // }
-        // ];
+        $scope.party.drinks = [
+          {
+            id:     4,
+            name:   'yellow bahía',
+            image:  'assets/images/fyellow.png',
+            price:  20
+          },
+          {
+            id:     5,
+            name:   'sakau mandarin',
+            image:  'assets/images/fsakau.png',
+            price:  25
+          },
+          {
+            id:     5,
+            name:   'sakau mandarin',
+            image:  'assets/images/fsakau.png',
+            price:  25
+          }
+        ];
         CurrentParty.drinks = $scope.party.drinks;
         
         function makeDrinkGroups() {
@@ -233,8 +232,18 @@
     .controller('MisFiestasController', [
       '$scope',
       'Parties',
-      function($scope, Parties) {
+      '$location',
+      function($scope, Parties, $location) {
         $scope.parties = Parties.parties;
+        
+        $scope.goToParty = function(partyId) {
+          console.log(partyId);
+          angular.forEach($scope.parties, function (party) {
+            if (party.id == partyId) {
+              $location.path('/detalle_fiesta/' + partyId);
+            }
+          });
+        };
       }
     ])
     

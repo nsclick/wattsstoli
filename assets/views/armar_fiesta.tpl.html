@@ -1,63 +1,71 @@
-<div class="container">
-  <button class="ly2_back">
-    <span>Atr&aacute;s</span>
-  </button>
+<div class="container text-center">
+  <a href="#/ver_recetario" class="ly_create_party_back" data-ng-click="goBack()">
+    <img data-ng-src="assets/images/{{images.size}}/btn_sakau_mandarin_{{images.size}}.png" />
+  </a>
   
-  <div class="row ly2_title">
+  <!--
+  <div class="row ly_create_party_header">
     <div class="col-xs-12 ly2_logo">
       Armar fiesta
     </div>
   </div>
+  -->
   
-  <div class="row ly2_drinks">
+  <div class="row ly_create_party_drinks">
     <div class="col-xs-12">    
       <ul>
         <li data-ng-repeat="drink in drinks">
-          <h3>{{drink.name}}</h3>
-          <div class="ly2_drink_image">
-            <img data-ng-src="{{drink.image}}" style="width:100px;height:100px;" />
+          
+          <div>
+            <h3>{{drink.name}}</h3>
+            <div class="ly_create_party_drink_image">
+              <img data-ng-src="{{drink.image}}" style="width:100px;height:100px;" />
+            </div>
+            <button type="button" class="ly_create_party_drink_add" data-ng-click="addDrink($index)">
+              <span>Agregar C&oacute;ctel</span>
+            </button>
           </div>
-          <button type="button" class="ly2_drink_add" data-ng-click="addDrink($index)">
-            <span>Agregar C&oacute;ctel</span>
-          </button>
+          
         </li>
       </ul>
       
-      <span class="ly2_drinks_prev" data-ng-click="showPrevious()">Anterior</span>
-      <span class="ly2_drinks_next" data-ng-click="showNext()">Siguiente</span>
+      <span class="ly_create_party_drinks_prev" data-ng-click="showPrevious()">Anterior</span>
+      <span class="ly_create_party_drinks_next" data-ng-click="showNext()">Siguiente</span>
     </div>
   </div>
   
   <div class="row">
     <div class="col-xs-12">
       
-      <div class="row">
-      	<div class="col-xs-12 ly2_recipes">
-          <a href="#/check_fiesta">
-            <span>Mirar selecci&oacute;n</span>
-          </a>
-        </div>
-      </div>
-      
-      <div class="row">
-      	<div class="col-xs-6 ly2_qty">
-          <span>{{party.drinks.length}} cantidad</span>
-        </div>
+      <table class="ly_create_party_table">
         
-      	<div class="col-xs-6 ly2_click">
-          <a href="#/go_fiesta">
-            <span>go fiesta</span>
-          </a>
-        </div>
-      </div>
-      
-      <div class="row">
-        <div class="col-xs-12 ly2_event">
-          <a href="#/intro_app">
-            <span>volver</span>
-          </a>
-        </div>
-      </div>
+        <tr class="row">
+          <td class="col-xs-12" colspan="2">
+            <a href="#/ver_recetario">
+              <span>Ver recetario</span>
+            </a>
+          </td>
+        </tr>
+        
+        <tr class="row">
+          <td class="col-xs-6">
+            <span>{{party.drinks.length}}</span>
+            <span>coct&eacute;les</span>
+          </td>
+          <td class="col-xs-6">
+            <span>Mirar selecci&oacute;n</span>
+          </td>
+        </tr>
+        
+        <tr class="row">
+          <td class="col-xs-12" colspan="2">
+            <a href="#/go_fiesta">
+              <span>Ir al evento</span>
+            </a>
+          </td>
+        </tr>
+        
+      </table>
       
     </div>
   </div>

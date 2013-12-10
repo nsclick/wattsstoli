@@ -341,27 +341,37 @@
           {
             id:       1,
             drinkId:  1,
-            partial: 'assets/views/drinks/fguanaja.tpl.html'
+            partial:  'assets/views/drinks/fguanaja.tpl.html',
+            name:     'guanaja_paradise',
+            juice:    'limonada'
           },
           {
             id:       2,
             drinkId:  2,
-            partial: 'assets/views/drinks/fthai.tpl.html'
+            partial:  'assets/views/drinks/fthai.tpl.html',
+            name:     'thai_lemonade',
+            juice:    'guayaba'
           },
           {
             id:       3,
             drinkId:  3,
-            partial: 'assets/views/drinks/fgreco.tpl.html'
+            partial: 'assets/views/drinks/fgreco.tpl.html',
+            name:     'greco_ras',
+            juice:    'frambuesa'
           },
           {
             id:       4,
             drinkId:  4,
-            partial: 'assets/views/drinks/fyellow.tpl.html'
+            partial:  'assets/views/drinks/fyellow.tpl.html',
+            name:     'yellow_bahia',
+            juice:    'mango_maracuya'
           },
           {
             id:       5,
             drinkId:  5,
-            partial: 'assets/views/drinks/fsakau.tpl.html'
+            partial:  'assets/views/drinks/fsakau.tpl.html',
+            name:     'sakau_mandarin',
+            juice:    'mandarina'
           }
         ];
       }
@@ -401,6 +411,23 @@
           this.drinks = [];
         };
         
+      }
+    ])
+    
+    /**
+     * Breadcrumbs
+     */
+    .service('Breadcrumbs', [
+      function () {
+        var breadcrumbs = [];
+        
+        this.previous = function () {
+          
+        };
+        
+        this.addBreadcrum = function (breadcrumb) {
+          breadcrumbs.push(breadcrumb);
+        };
       }
     ])
     

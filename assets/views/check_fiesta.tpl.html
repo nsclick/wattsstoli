@@ -1,48 +1,51 @@
 <div class="container">
+  <a href="#/armar_fiesta" class="ly_check_party_back">
+    <img data-ng-src="assets/images/{{images.size}}/btn_back_gray_{{images.size}}.png" />
+  </a>
   
-  <div class="row">
-  	<div class="col-xs-12 ly2_logo">
-      Watts | Stoli
+  <div class="ly_check_party_header row margin_top_42">
+  	<div class="col-xs-12 text-center">
+      <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
     </div>
   </div>
   
   <div class="row">
-  	<div class="col-xs-12">
-      <table>
-        <thead>
-          <tr>
-            <th>C&oacute;ctel</td>
-            <th colspan="2">P_ico</td>
-          </tr>
-        </thead>
+  	<div class="col-xs-12 ly_check_party_table">
+      
+      <div class="row ly_check_party_table_head">
+        <div class="col-xs-8 ly_check_party_table_head_cell ">
+          <span>C&oacute;ctel</span>
+        </div>
         
-        <tbody data-ng-repeat="drinkGroup in drinkGroups">
-          <tr>
-            <td>{{drinkGroup.drink.name}}</td>
-            <td>{{drinkGroup.qty}}</td>
-            <td>
-              <button type="button" data-ng-click="removeDrinkGroupAtIndex($index)">
-                <span>Eliminar</span>
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+        <div class="col-xs-2 ly_check_party_table_head_cell_s">
+          <span>P_ico</span>
+        </div>
+      </div>
+      
+      <div class="row ly_check_party_drink" data-ng-repeat="drinkGroup in drinkGroups">
+        <div class="col-xs-8 ly_check_party_drink_name">
+          <span>{{drinkGroup.drink.name}}</span>
+        </div>
+        
+        <div class="col-xs-2 ly_check_party_drink_qty">
+          <span>{{drinkGroup.qty}}</span>
+        </div>
+        
+        <div class="col-xs-1 ly_check_party_remove">
+          <button type="button" data-ng-click="removeDrinkGroupAtIndex($index)">
+            <img data-ng-src="assets/images/{{images.size}}/btn_remove_{{images.size}}.png"/>
+          </button>
+        </div>
+      </div>
+      
     </div>
   </div>
   
   <div class="row">
-  	<div class="col-xs-12">
-      <button type="button" class="ly3_nav_btn">
-        <span>Vuelve a tus eventos</span>
-      </button>
-    </div>
-  </div>
-  
-  <div class="row">
-  	<div class="col-xs-12">
-      <a href="#/go_fiesta" class="ly3_nav_btn">
+  	<div class="col-xs-11">
+      <a href="#/go_fiesta" class="ly_check_party_go">
         <span>Ir al evento</span>
+        <span class="icon icon-arrow-right"></span>
       </a>
     </div>
   </div>

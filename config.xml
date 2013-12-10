@@ -51,6 +51,7 @@ permission on your app, which PhoneGap requires.
     
   <!-- Build Platforms -->
   <gap:platform name="android" />
+  <gap:platform name="ios" />
 
     <!-- Define app icon for each platform. -->
 	<icon src="icons/57.png" gap:platform="ios" width="57" height="57" />
