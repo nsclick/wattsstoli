@@ -124,7 +124,7 @@
             return;
           }
           
-          $location.path('/go_fiesta"');
+          $location.path('/go_fiesta');
         };
         
         // $scope.party.drinks = [

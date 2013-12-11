@@ -304,6 +304,10 @@ a:active {
   text-align: center;
 }
 
+.ly_parties_go img {
+  vertical-align: middle;
+}
+
 .ly_parties_back {
   margin-top: 30px;
 }
@@ -509,7 +513,9 @@ a:active {
   border-collapse: separate;
 }
 
-
+.ly_check_party_remove button {
+  margin-top: -18px;
+}
 
 .ly_check_party_table_head_1,
 .ly_check_party_table_head_2 {
@@ -635,7 +641,7 @@ a:active {
 
 .ly_go_party_name input {
   width: 234px;
-  margin-left: -2px;
+  margin-left: -4px;
   border: 1px solid #e5b547;
   padding-top: 10px;
   padding-bottom: 10px;
@@ -661,8 +667,8 @@ a:active {
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: bold;
-  padding-bottom: 20px;
-  padding-top: 20px;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 .ly_go_party_save .icon {
