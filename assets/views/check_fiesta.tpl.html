@@ -1,0 +1,53 @@
+<div class="container centered_view">
+  
+  <a href="#/armar_fiesta" class="ly_top_back">
+    <img data-ng-src="assets/images/{{images.size}}/btn_back_gray_{{images.size}}.png" />
+  </a>
+  
+  <div class="logo_header_sm">
+    <a href="#/intro_app">
+      <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
+    </a>
+  </div>
+  
+  <div>
+    <table class="ly_check_party_table">
+    
+      <thead class="ly_check_party_table_head">
+        <tr>
+          <td class="ly_check_party_table_head_1">
+            <span>C&oacute;ctel</span>
+          </td>
+          <td class="ly_check_party_table_head_2">
+            <span>P_ico</span>
+          </td>
+        </tr>
+      </thead>
+      
+      <tbody data-ng-repeat="drinkGroup in drinkGroups">
+        <tr>
+          <td class="ly_check_party_drink_name">
+            <span>{{drinkGroup.drink.name}}</span>
+          </td>
+          <td class="ly_check_party_drink_qty">
+            <span>{{drinkGroup.qty}}</span>
+          </td>
+          <td class="ly_check_party_remove">
+            <button type="button" data-ng-click="removeDrinkGroupAtIndex($index)">
+              <img data-ng-src="assets/images/{{images.size}}/btn_remove_{{images.size}}.png"/>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      
+    </table>
+  </div>
+  
+  <div>
+    <a href="#/go_fiesta" class="ly_check_party_go">
+      <span>Ir al evento</span>
+      <span class="icon icon-arrow-right"></span>
+    </a>
+  </div>
+  
+</div>
