@@ -267,10 +267,15 @@ a:active {
   padding-left: 15px;
   padding-right: 15px;
   color: #000;
+  border-spacing: 2px 2px;
+  border-collapse: separate;
 }
 
 .ly_parties_table_row {
   display: table-row;
+  width: 300px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ly_parties_table_col {
@@ -279,20 +284,24 @@ a:active {
 }
 
 .ly_parties_name {
-  width: 200px;
+  width: 190px;
   background-color: #fff;
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: bold;
   vertical-align: middle;
   text-align: left;
-  padding-left: 20px;
+  padding-left: 10px;
 }
 
 .ly_parties_go {
   width: 75px;
   background-color: #fff;
-  margin-left: 5px;
+  vertical-align: middle;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .ly_parties_back {
