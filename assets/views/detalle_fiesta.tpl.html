@@ -1,0 +1,36 @@
+<div class="container centered_view">
+   <div class="logo_header_sm">
+    <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
+  </div>
+  
+  <div class="ly_party_title">
+    <img data-ng-src="assets/images/{{images.size}}/titulo_mis_eventos_{{images.size}}.png" />
+  </div>
+  
+  <div class="ly_party_name">{{party.name}}</div>
+  
+  <div class="ly_party_table">
+    
+    <div data-ng-repeat="ingredientGroup in ingredientGroups">
+      <div class="ly_party_table_row" data-ng-click="goToParty(party.id)">
+        <div class="ly_party_ig_name ly_party_table_col">
+          <span>{{ingredientGroup.ingredient.Ingredient.name}}</span>
+        </div>
+        <div class="ly_party_ig_qty ly_party_table_col">
+          {{ingredientGroup.unitsNeeded}}
+        </div>
+      </div>
+    </div>
+    
+  </div>
+  
+  <div class="ly_party_back">
+    <a href="#/mis_fiestas">
+      <span class="icon icon-arrow-left"></span>
+      <span>Vuelve a tus eventos</span>
+    </a>
+  </div>
+  
+  
+  
+</div>
