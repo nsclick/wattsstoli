@@ -1,0 +1,32 @@
+<div class="container centered_view">
+  
+  <div class="logo_header_sm">
+    <a href="#/intro_app">
+      <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
+    </a>
+  </div>
+  
+  <div class="ly_parties_title">
+    <img data-ng-src="assets/images/{{images.size}}/titulo_mis_eventos_{{images.size}}.png" />
+  </div>
+
+  <div class="ly_parties_table">
+    <div data-ng-repeat="party in parties">
+      <div class="ly_parties_table_row" data-ng-click="goToParty(party.id)">
+        <div class="ly_parties_name ly_parties_table_col">
+          <span>{{party.name}}</span>
+        </div>
+        <div class="ly_parties_go ly_parties_table_col">
+          <img data-ng-src="assets/images/{{images.size}}/btn_go_{{images.size}}.png"/>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="ly_parties_back">
+    <a href="#/intro_app">
+      <img data-ng-src="assets/images/{{images.size}}/btn_back_white_{{images.size}}.png"/>
+    </a>
+  </div>
+  
+</div>
