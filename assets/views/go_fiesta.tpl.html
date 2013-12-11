@@ -1,0 +1,48 @@
+<div class="container centered_view">
+  
+  <a href="#/check_fiesta" class="ly_top_back">
+    <img data-ng-src="assets/images/{{images.size}}/btn_back_gray_{{images.size}}.png" />
+  </a>
+  
+  <div class="logo_header_sm">
+    <a href="#/intro_app">
+      <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
+    </a>
+  </div>
+  
+  <div>
+    <img data-ng-src="assets/images/{{images.size}}/titulo_vas_necesitar_{{images.size}}.png"/>
+  </div>
+  
+  <div>
+    <table class="ly_go_party_table">
+      <tbody class=" ly_go_party_ingredient_group" data-ng-repeat="ingredientGroup in ingredientGroups">
+        <tr>
+          <td class="ly_go_party_ig_name">
+            <span>{{ingredientGroup.ingredient.Ingredient.name}}</span>
+          </td>
+          
+          <td class="ly_go_party_ig_units">
+            <span>{{ingredientGroup.unitsNeeded}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  
+  <div>
+    <form>
+      <div class="form-group ly_go_party_name">
+        <input id="partyName" type="text" class="form-control" data-ng-model="party.name" placeholder="Nombre fiesta" data-ng-change="updatePartyName()" />
+      </div>
+    </form>
+  </div>
+  
+  <div class="ly_go_party_save">
+    <button type="button" class="ly3_nav_btn" data-ng-click="saveParty()" data-ng-disabled="isDisabled()">
+      <span>Guardar evento</span>
+      <span class="icon icon-arrow-right"></span>
+    </button>
+  </div>
+  
+</div>
