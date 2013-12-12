@@ -189,8 +189,8 @@
           {
             id:         1,
             name:       'frutillas',
-            unit:       'gramo',
-            unitPlural: 'gramos',
+            unit:       '',
+            unitPlural: '',
             maxPerUnit: 60
           },
           {
@@ -203,43 +203,43 @@
           {
             id:         3,
             name:       'vodka stolichnaya',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
             id:         4,
             name:       'seleccion sabor guayaba',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
             id:         5,
             name:       'pepino',
-            unit:       'rodaja',
-            unitPlural: 'rodajas',
+            unit:       '',
+            unitPlural: '',
             maxPerUnit: 6
           },
           {
             id:         6,
             name:       'vodka stolichnaya blueberi',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
             id:         7,
             name:       'seleccion sabor limonada',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
             id:         8,
             name:       'seleccion sabor frambuesa',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
@@ -259,8 +259,8 @@
           {
             id:         11,
             name:       'seleccion sabor mango maracuya',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
@@ -273,15 +273,15 @@
           {
             id:         13,
             name:       'vodka stolichnaya razberi',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
           },
           {
             id:         14,
             name:       'seleccion sabor mandarina',
-            unit:       'lt',
-            unitPlural: 'lts',
+            unit:       '1 Lt',
+            unitPlural: 'Lts',
             maxPerUnit: 750
             
           }

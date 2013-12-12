@@ -19,7 +19,11 @@
       <tbody class=" ly_go_party_ingredient_group" data-ng-repeat="ingredientGroup in ingredientGroups">
         <tr>
           <td class="ly_go_party_ig_name">
-            <span>{{ingredientGroup.ingredient.Ingredient.name}}</span>
+            <span>
+              {{ingredientGroup.ingredient.Ingredient.name}}
+              <br/>
+              {{ingredientGroup.ingredient.Ingredient.unit}}
+            </span>
           </td>
           
           <td class="ly_go_party_ig_units">

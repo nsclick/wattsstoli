@@ -127,26 +127,26 @@
           $location.path('/go_fiesta');
         };
         
-        // $scope.party.drinks = [
-          // {
-            // id:     4,
-            // name:   'yellow bahía',
-            // image:  'assets/images/fyellow.png',
-            // price:  20
-          // },
-          // {
-            // id:     5,
-            // name:   'sakau mandarin',
-            // image:  'assets/images/fsakau.png',
-            // price:  25
-          // },
-          // {
-            // id:     5,
-            // name:   'sakau mandarin',
-            // image:  'assets/images/fsakau.png',
-            // price:  25
-          // }
-        // ];
+        $scope.party.drinks = [
+          {
+            id:     4,
+            name:   'yellow bahía',
+            image:  'assets/images/fyellow.png',
+            price:  20
+          },
+          {
+            id:     5,
+            name:   'sakau mandarin',
+            image:  'assets/images/fsakau.png',
+            price:  25
+          },
+          {
+            id:     5,
+            name:   'sakau mandarin',
+            image:  'assets/images/fsakau.png',
+            price:  25
+          }
+        ];
         CurrentParty.drinks = $scope.party.drinks;
         
         function makeDrinkGroups() {
@@ -240,6 +240,8 @@
         
         makeIngredientGroups(); // Create ingredient groups
         calcQuantities();
+        
+        console.log($scope.ingredientGroups);
         
         $scope.updatePartyName = function() {
           CurrentParty.updateName($scope.party.name);

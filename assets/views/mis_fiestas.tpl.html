@@ -11,13 +11,14 @@
   </div>
 
   <div class="ly_parties_table">
-    <div data-ng-repeat="party in parties">
-      <div class="ly_parties_table_row" data-ng-click="goToParty(party.id)">
+    <div data-ng-repeat="party in parties" class="ly_parties_table_party" data-ng-class="{even: $even}">
+      <div class="ly_parties_table_row" data-ng-click="goToParty(party.id)" >
         <div class="ly_parties_name ly_parties_table_col">
           <span>{{party.name}}</span>
         </div>
         <div class="ly_parties_go ly_parties_table_col">
-          <img data-ng-src="assets/images/{{images.size}}/btn_go_{{images.size}}.png"/>
+          <span class="icon icon-arrow-right"></span>
+          <!--<img data-ng-src="assets/images/{{images.size}}/btn_go_{{images.size}}.png"/> -->
         </div>
       </div>
     </div>

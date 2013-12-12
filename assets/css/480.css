@@ -278,6 +278,11 @@ a:active {
   margin-right: auto;
 }
 
+.ly_parties_table_party.even .ly_parties_name,
+.ly_parties_table_party.even .ly_parties_go {
+  background-color: #d8d9dd;
+}
+
 .ly_parties_table_col {
   display: table-cell;
   border-bottom: 5px solid rgba(0,0,0,0);
@@ -292,6 +297,7 @@ a:active {
   vertical-align: middle;
   text-align: left;
   padding-left: 10px;
+  vertical-align: middle;
 }
 
 .ly_parties_go {
@@ -302,6 +308,12 @@ a:active {
   font-size: 2.2rem;
   font-weight: bold;
   text-align: center;
+  vertical-align: middle;
+}
+
+.ly_parties_go .icon {
+  font-size: 40px;
+  font-size: 4rem;
 }
 
 .ly_parties_go img {
@@ -309,7 +321,8 @@ a:active {
 }
 
 .ly_parties_back {
-  margin-top: 30px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 /*************************************************************
@@ -352,8 +365,10 @@ a:active {
  display: table-cell;
 }
 
-.ly_party_ig_name {
+.ly_party_ig_container {
   width: 190px;
+  width: 260px;
+  position: relative;
   background-color: #fff;
   font-size: 22px;
   font-size: 2.2rem;
@@ -363,14 +378,17 @@ a:active {
   padding-left: 10px;
 }
 
-.ly_party_ig_qty {
-  width: 75px;
-  background-color: #fff;
+.ly_party_ig_name {
+  width: 220px;
+  display: inline-block;
   vertical-align: middle;
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-weight: bold;
-  text-align: center;
+}
+
+.ly_party_ig_qty  {
+  position: absolute;
+  right: 10px;
+  vertical-align: middle;
+  height: 100%;
 }
 
 .ly_party_back {
@@ -383,7 +401,8 @@ a:active {
   margin-right: auto;
   font-weight: bold;
   vertical-align: middle;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   padding: 10px 0px;
 }
 
@@ -444,7 +463,8 @@ a:active {
   width: 250px;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: bold;
@@ -470,12 +490,16 @@ a:active {
 }
 
 .ly_create_party_check.disabled a {
-  color: gray;
-  background-color: #c09b82;
+  background-color: #777;
+  color: #aaa;
 }
 
 .ly_create_party_go {
   background-color: #cb6018;
+}
+
+.ly_create_party_qty a {
+  text-align: left;
 }
 
 .ly_create_party_qty a,
@@ -488,9 +512,17 @@ a:active {
   text-align: center;
 }
 
+.ly_create_party_go a {
+  padding-left: 39px;
+}
+
+.ly_create_party_qty div {
+  font-size: 2rem;
+}
+
 .ly_create_party_go.disabled a {
-  color: gray;
-  background-color: #c09b82;
+  background-color: #777;
+  color: #aaa;
 }
 
 .ly_create_party_go .icon {
@@ -573,15 +605,16 @@ a:active {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 5px;
+  margin-bottom: 10px;
   color: #000;
   padding-top: 10px;
   padding-bottom: 10px;
 }
 
 .ly_check_party_go.disabled {
-  background-color: #c09b82;
-  color: gray;
+  background-color: #777;
+  color: #aaa;
 }
 
 .ly_check_party_go .icon {
@@ -660,7 +693,8 @@ a:active {
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
 
 .ly_go_party_save button {
@@ -669,6 +703,13 @@ a:active {
   font-weight: bold;
   padding-bottom: 10px;
   padding-top: 10px;
+  display: block;
+  width: 100%;
+}
+
+.ly_go_party_save button[disabled] {
+  background-color: #777;
+  color: #aaa;
 }
 
 .ly_go_party_save .icon {

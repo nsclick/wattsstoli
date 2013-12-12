@@ -16,11 +16,11 @@
     
     <div data-ng-repeat="ingredientGroup in ingredientGroups">
       <div class="ly_party_table_row" data-ng-click="goToParty(party.id)">
-        <div class="ly_party_ig_name ly_party_table_col">
-          <span>{{ingredientGroup.ingredient.Ingredient.name}}</span>
-        </div>
-        <div class="ly_party_ig_qty ly_party_table_col">
-          {{ingredientGroup.unitsNeeded}}
+        <div class="ly_party_ig_container ly_party_table_col">
+          <span class="ly_party_ig_name">{{ingredientGroup.ingredient.Ingredient.name}}</span>
+        <!--</div>
+        <div class="ly_party_ig_qty ly_party_table_col"> -->
+          <span class="ly_party_ig_qty">{{ingredientGroup.unitsNeeded}}</span>
         </div>
       </div>
     </div>
