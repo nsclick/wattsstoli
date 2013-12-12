@@ -41,7 +41,7 @@
                   
                   CDV.FB.getLoginStatus(function (r) {
                     console.log('LoginStatus: ', r);
-                    if (r.status == 'connected') {
+                    if (true || r.status == 'connected') {
                       CDV.FB.dialog(
                         {
                           method:       'feed',
@@ -56,7 +56,7 @@
                       );
                       
                     } else {
-                      CDV.FB.login(function (r) {
+                      CDV.FB.login({}, function (r) {
                         console.log('Logged in: ', r);
                       });
                     }
