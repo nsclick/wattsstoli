@@ -36,10 +36,11 @@
               ev.preventDefault();
               
               phonegapload.ready.then(function( Cordova ) {
-                if ($window.CDV) {
+                // if ($window.CDV) {
                   console.log('CDV!');
                   
                   CDV.FB.getLoginStatus(function (r) {
+                    console.log('LoginStatus: ', r);
                     if (r.status == 'connected') {
                       CDV.FB.dialog(
                         {
@@ -60,7 +61,7 @@
                       });
                     }
                   });
-                }
+                // }
               });
               
               console.log('clicked');
