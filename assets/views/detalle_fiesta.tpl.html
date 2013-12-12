@@ -5,22 +5,34 @@
       <img data-ng-src="assets/images/{{images.size}}/logo_sm_{{images.size}}.png" />
     </a>
   </div>
+
+  <div class="ly_party_name">{{party.name | uppercase}}</div>
   
   <div class="ly_party_title">
-    <img data-ng-src="assets/images/{{images.size}}/titulo_mis_eventos_{{images.size}}.png" />
+    <img data-ng-src="assets/images/{{images.size}}/titulo_para_armar_{{images.size}}.png" />
   </div>
   
-  <div class="ly_party_name">{{party.name}}</div>
+  <div class="ly_party_drinks">
+    <ul>
+      <li data-ng-repeat="drinkGroup in drinkGroups" class="ly_party_drink_name">
+        <span>{{drinkGroup.qty}} {{drinkGroup.drink.name | uppercase}}</span>
+      </li>
+    </ul>
+  </div>
+  
+  <div class="ly_party_title">
+    <img data-ng-src="assets/images/{{images.size}}/titulo_usted_necesito_{{images.size}}.png"/>
+  </div>
   
   <div class="ly_party_table">
     
     <div data-ng-repeat="ingredientGroup in ingredientGroups">
       <div class="ly_party_table_row" data-ng-click="goToParty(party.id)">
         <div class="ly_party_ig_container ly_party_table_col">
-          <span class="ly_party_ig_name">{{ingredientGroup.ingredient.Ingredient.name}}</span>
+          <span class="ly_party_ig_name">{{ingredientGroup.ingredient.Ingredient.name | uppercase}}</span>
         <!--</div>
         <div class="ly_party_ig_qty ly_party_table_col"> -->
-          <span class="ly_party_ig_qty">{{ingredientGroup.unitsNeeded}}</span>
+          <span class="ly_party_ig_qty">{{ingredientGroup.unitsNeeded | uppercase}}</span>
         </div>
       </div>
     </div>

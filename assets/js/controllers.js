@@ -7,22 +7,27 @@
     
     .controller('MainController', [
       '$scope',
-      'Facebook',
-      function($scope, Facebook) {
+      // 'Facebook',
+      function($scope) {
         $scope.images = {
           size: 320
         };
         
-        $scope.login = function() {
-          alert('clicked');
-          
-          Facebook.login()
-            .then(function (r) {
-              alert(r);
-              
-              $scope.status = r;
-            });
-        };
+       // $scope.login = function() {
+          // console.log('login');
+          // Facebook.login(function(r) {
+              // console.log('Logged in: ', r);
+            // }
+          // );
+        // };
+        
+        // $scope.logout = function () {
+          // console.log('out');
+          // Facebook.logout(function(r) {
+            // console.log('logout ', r);
+          // })
+        // };
+        
       }
     ])
     
@@ -313,8 +318,26 @@
         $scope.party            = party;
         $scope.ingredients      = [];
         $scope.ingredientGroups = [];
+        $scope.drinkGroups = [];
         
         angular.forEach($scope.party.drinks, function(drink) {
+          // Make drinkGroups
+          var exists = false;
+          angular.forEach($scope.drinkGroups, function (drinkGroup) {
+            if (drinkGroup.drink.id == drink.id) {
+              exists = true;
+              drinkGroup.qty += 1;
+            }
+          });
+          
+          if (!exists) {
+            $scope.drinkGroups.push({
+              drink: drink,
+              qty:   1
+            });
+          }
+          
+          // Seek for ingredients for these drinks
           var ingredients     = DrinksIngredients.seekIngredientsByDrinkId(drink.id);
           $scope.ingredients = $scope.ingredients.concat(ingredients);
         });

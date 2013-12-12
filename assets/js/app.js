@@ -12,17 +12,16 @@
       'ngRoute',
       'ngTouch',
       'ngAnimate',
-      'facebook'
+      // 'facebook'
     ])
       
       .config([
         '$routeProvider',
         '$locationProvider',
-        'FacebookProvider',
-        function($routeProvider, $locationProvider, FacebookProvider) {
+        function($routeProvider, $locationProvider) {
           
-          FacebookProvider.init('145154345631340', false); // Initialize Facebook module
-          FacebookProvider.setInitCustomOption('localSDK', 'assets/js/vendor/facebook/facebook-js-sdk.js');
+          // FacebookProvider.init('145154345631340', false); // Initialize Facebook module
+          // FacebookProvider.setInitCustomOption('localSDK', 'assets/js/vendor/facebook/facebook-js-sdk.js');
           
           // Whitelist file URIs
           // $compileProvider.urlSanitizationWhitelist(/^\s*(https?|ftp|mailto|file|tel):/);

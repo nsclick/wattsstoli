@@ -27,7 +27,7 @@
       <tbody data-ng-repeat="drinkGroup in drinkGroups">
         <tr>
           <td class="ly_check_party_drink_name">
-            <span>{{drinkGroup.drink.name}}</span>
+            <span>{{drinkGroup.drink.name | uppercase}}</span>
           </td>
           <td class="ly_check_party_drink_qty">
             <span>{{drinkGroup.qty}}</span>

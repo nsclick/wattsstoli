@@ -14,7 +14,7 @@
     <div data-ng-repeat="party in parties" class="ly_parties_table_party" data-ng-class="{even: $even}">
       <div class="ly_parties_table_row" data-ng-click="goToParty(party.id)" >
         <div class="ly_parties_name ly_parties_table_col">
-          <span>{{party.name}}</span>
+          <span>{{party.name | uppercase}}</span>
         </div>
         <div class="ly_parties_go ly_parties_table_col">
           <span class="icon icon-arrow-right"></span>
