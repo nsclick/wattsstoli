@@ -37,7 +37,7 @@
               
               phonegapload.ready.then(function( Cordova ) {
                 // if ($window.CDV) {
-                  console.log('CDV!');
+                  console.log('CDV!: ', CDV);
                   
                   CDV.FB.getLoginStatus(function (r) {
                     console.log('LoginStatus: ', r);
@@ -61,8 +61,8 @@
                       });
                     }
                   });
-                // }
-              });
+                }
+              // });
               
               console.log('clicked');
             });
