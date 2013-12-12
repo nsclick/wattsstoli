@@ -20,7 +20,9 @@
     
     .directive('facebookShare', [
       '$location',
-      function ($location) {
+      'phonegap.load',
+      '$window',
+      function ($location, phonegapload, $window) {
         return {
           restrict: 'A',
           link:     function (scope, element, attrs) {
@@ -30,29 +32,42 @@
                 summary         = attrs.summary,
                 image           = attrs.image;
             
-            var images = image.split(',');
-            
-            var p = '';
-            
-            if (!angular.isUndefined(title)) {
-              p += '&p[title]=' + title;  
-            }
-            
-            if (!angular.isUndefined(summary)) {
-              p += '&p[summary]=' + summary;  
-            }
-            
-            if (!angular.isUndefined(url)) {
-              p += '&p[url]=' + url;  
-            }
-            
-            angular.forEach(images, function(image, index) {
-              p += '&p[images][' + index + ']=' + image.trim();
+            element.on('click', function (ev) {
+              ev.preventDefault();
+              
+              phonegapload.ready.then(function( Cordova ) {
+                if ($window.CDV) {
+                  console.log('CDV!');
+                  
+                  CDV.FB.getLoginStatus(function (r) {
+                    if (r.status == 'connected') {
+                      CDV.FB.dialog(
+                        {
+                          method:       'feed',
+                          link:         url,
+                          caption:      title,
+                          picture:      image,
+                          description:  summary
+                        },
+                        function(r) {
+                          console.log('Sharing!');
+                        }
+                      );
+                      
+                    } else {
+                      CDV.FB.login(function (r) {
+                        console.log('Logged in: ', r);
+                      });
+                    }
+                  });
+                }
+              });
+              
+              console.log('clicked');
             });
             
             
-            var link = facebookSharer + p;
-            attrs.$set('ngHref', link);
+            
           }
         };
       }

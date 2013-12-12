@@ -8,32 +8,20 @@
     .controller('MainController', [
       '$scope',
       'phonegap.load',
-      function($scope, PhonegapLoad) {
+      '$timeout',
+      function($scope, PhonegapLoad, $timeout) {
         $scope.images = {
           size: 320
         };
         
-        PhonegapLoad.ready.then(function (Cordova) {
-          console.log('Cordova: ', Cordova);
+        $scope.facebookEnabled = true;
+        PhonegapLoad.ready.then(function(Cordova) {
+          CDV.FB.init('550303808397350', function(error) {
+            $timeout(function() {
+              $scope.facebookEnabled = false;
+            });
+          });
         });
-        
-        $scope.login = function() {
-          console.log('login');
-          Facebook.login(function(r) {
-              $scope.status = r;
-              alert('logged in');
-            }
-          );
-        };
-        
-        $scope.logout = function () {
-          console.log('out');
-          Facebook.logout(function(r) {
-            $scope.status = r;
-            alert('logged in');
-          })
-        };
-        
       }
     ])
     
@@ -400,7 +388,7 @@
     .controller('VerRecetaController', [
       '$scope',
       'recipe',
-      function($scope, recipe) {
+      function($scope, recipe, phonegapload) {
         $scope.recipe = recipe;
       }
     ])

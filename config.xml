@@ -71,6 +71,9 @@ permission on your app, which PhoneGap requires.
     <param name="APP_NAME" value="WattsMobile" />
   </gap:plugin>
   
+  <!-- ChildBrowser Plugin -->
+  <gap:plugin name="com.phonegap.plugins.childbrowser" />
+  
 
   <!-- Origins -->
   <access origin="facebook.com" />
@@ -79,6 +82,10 @@ permission on your app, which PhoneGap requires.
   <access origin="api.facebook.com" />
   <access origin="*.fbcdn.net" />
   <access origin="*.akamaihd.net" />
+  
+  <engines>
+    <engine name="cordova" version=">=2.3.0" />
+  </engines>
     <!--
 Define access to external domains.
 

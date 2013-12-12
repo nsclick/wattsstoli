@@ -15,7 +15,7 @@
         this.ready = d.promise;
 
         $document.on('deviceready', function() {
-          console.log('Resolved');
+          console.log('resolved!');
           resolved = true;
           d.resolve(window.cordova);
         });
