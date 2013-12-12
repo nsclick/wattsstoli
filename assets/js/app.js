@@ -20,8 +20,8 @@
         '$locationProvider',
         'FacebookProvider',
         function($routeProvider, $locationProvider, FacebookProvider) {
-          
-          FacebookProvider.init('550303808397350'); // Initialize Facebook module
+          document.addEventListener('deviceready', function () { console.log('Loaded!'); }, false);
+          FacebookProvider.init('145154345631340'); // Initialize Facebook module
           // FacebookProvider.setInitCustomOption('localSDK', 'assets/js/vendor/facebook/facebook-js-sdk.js');
           
           // Whitelist file URIs

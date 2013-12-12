@@ -41,6 +41,7 @@ provides: [angular-facebook-phonegap]
         
         // Phonegap deviceready event fired!, now load Facebook SDK
         function onReady() {
+          console.log('Ready!');
           if (!angular.isString(localSDKSrc)) {
             throw 'Missing localSDK setting pointing to the local javascript file with the Facebook SDK';
             return false;
