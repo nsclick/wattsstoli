@@ -13,20 +13,22 @@
           size: 320
         };
         
-       // $scope.login = function() {
-          // console.log('login');
-          // Facebook.login(function(r) {
-              // console.log('Logged in: ', r);
-            // }
-          // );
-        // };
+       $scope.login = function() {
+          console.log('login');
+          Facebook.login(function(r) {
+              $scope.status = r;
+              alert('logged in');
+            }
+          );
+        };
         
-        // $scope.logout = function () {
-          // console.log('out');
-          // Facebook.logout(function(r) {
-            // console.log('logout ', r);
-          // })
-        // };
+        $scope.logout = function () {
+          console.log('out');
+          Facebook.logout(function(r) {
+            $scope.status = r;
+            alert('logged in');
+          })
+        };
         
       }
     ])
@@ -144,26 +146,27 @@
           $location.path('/go_fiesta');
         };
         
-        $scope.party.drinks = [
-          {
-            id:     4,
-            name:   'yellow bahía',
-            image:  'assets/images/fyellow.png',
-            price:  20
-          },
-          {
-            id:     5,
-            name:   'sakau mandarin',
-            image:  'assets/images/fsakau.png',
-            price:  25
-          },
-          {
-            id:     5,
-            name:   'sakau mandarin',
-            image:  'assets/images/fsakau.png',
-            price:  25
-          }
-        ];
+        // Dummy data
+        // $scope.party.drinks = [
+          // {
+            // id:     4,
+            // name:   'yellow bahía',
+            // image:  'assets/images/fyellow.png',
+            // price:  20
+          // },
+          // {
+            // id:     5,
+            // name:   'sakau mandarin',
+            // image:  'assets/images/fsakau.png',
+            // price:  25
+          // },
+          // {
+            // id:     5,
+            // name:   'sakau mandarin',
+            // image:  'assets/images/fsakau.png',
+            // price:  25
+          // }
+        // ];
         CurrentParty.drinks = $scope.party.drinks;
         
         function makeDrinkGroups() {
@@ -365,7 +368,6 @@
         
         function calcQuantities() {
           angular.forEach($scope.ingredientGroups, function(group) {
-            console.log(group);
             var unitsNeeded = (group.qty * group.ingredient.Relation.qty) / group.ingredient.Ingredient.maxPerUnit;
             group.unitsNeeded = Math.ceil(unitsNeeded);
           });
