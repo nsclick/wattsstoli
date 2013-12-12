@@ -58,7 +58,7 @@ provides: [angular-facebook-phonegap]
           document.getElementsByTagName('head')[0].appendChild(script); // // Fix for IE < 9, and yet supported by lattest browsers
         };
         
-        document.addEventListener("deviceredy", onReady, false);
+        document.addEventListener("deviceready", onReady, false);
        } 
       ])
       ;
