@@ -2,7 +2,7 @@
   
   angular.module('phonegap', [])
     
-    .service('phonegap.load', [
+    .service('CordovaService', [
       '$document',
       '$q',
       '$timeout',
@@ -14,7 +14,7 @@
         var self = this;
         this.ready = d.promise;
 
-        $document.on('deviceready', function() {
+        document.on('deviceready', function() {
           console.log('resolved!');
           resolved = true;
           d.resolve(window.cordova);

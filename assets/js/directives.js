@@ -20,9 +20,9 @@
     
     .directive('facebookShare', [
       '$location',
-      'phonegap.load',
+      'CordovaService',
       '$window',
-      function ($location, phonegapload, $window) {
+      function ($location, CordovaService, $window) {
         return {
           restrict: 'A',
           link:     function (scope, element, attrs) {
@@ -35,7 +35,7 @@
             element.on('click', function (ev) {
               ev.preventDefault();
               
-              phonegapload.ready.then(function( Cordova ) {
+              CordovaService.ready.then(function( Cordova ) {
                 // if ($window.CDV) {
                   console.log('CDV!: ', CDV);
                   

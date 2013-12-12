@@ -7,15 +7,15 @@
     
     .controller('MainController', [
       '$scope',
-      'phonegap.load',
+      'CordovaService',
       '$timeout',
-      function($scope, PhonegapLoad, $timeout) {
+      function($scope, CordovaService, $timeout) {
         $scope.images = {
           size: 320
         };
         
         $scope.facebookEnabled = true;
-        PhonegapLoad.ready.then(function(Cordova) {
+        CordovaService.ready.then(function(Cordova) {
           console.log('Cordova is ready!');
           CDV.FB.init('550303808397350', function(error) {
             $timeout(function() {
