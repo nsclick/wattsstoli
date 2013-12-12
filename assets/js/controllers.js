@@ -16,6 +16,7 @@
         
         $scope.facebookEnabled = true;
         PhonegapLoad.ready.then(function(Cordova) {
+          console.log('Cordova is ready!');
           CDV.FB.init('550303808397350', function(error) {
             $timeout(function() {
               $scope.facebookEnabled = false;
