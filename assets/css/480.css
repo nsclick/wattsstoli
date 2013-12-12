@@ -380,38 +380,45 @@ a:active {
   padding-left: 15px;
   padding-right: 15px;
   color: #000;
-  border-spacing: 2px 2px;
-  border-collapse: separate;
+  border-collapse: collapse;
+  border-spacing: 0px;
 }
 
-.ly_party_table_row {
-  display: table-row;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.ly_party_table_col {
- display: table-cell;
-}
-
-.ly_party_ig_container {
-  width: 190px;
-  width: 260px;
-  position: relative;
+.ly_party_table tbody {
   background-color: #fff;
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-weight: bold;
-  vertical-align: middle;
-  text-align: left;
-  padding-left: 10px;
 }
 
 .ly_party_ig_name {
   width: 220px;
-  display: inline-block;
   vertical-align: middle;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 15px;
+}
+
+.ly_party_ig_units_needed {
+  vertical-align: middle;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.ly_party_ig_unit {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: bold;
+  vertical-align: middle;
+  text-align: left;
+  padding-left: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
 
 .ly_party_ig_qty  {
@@ -426,12 +433,12 @@ a:active {
   color: #000;
   font-size: 22px;
   font-size: 2.2rem;
-  width: 270px;
+  width: 280px;
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
   vertical-align: middle;
-  margin-top: 5px;
+  margin-top: 10px;
   margin-bottom: 10px;
   padding: 10px 0px;
 }

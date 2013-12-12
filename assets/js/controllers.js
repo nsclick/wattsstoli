@@ -365,6 +365,7 @@
         
         function calcQuantities() {
           angular.forEach($scope.ingredientGroups, function(group) {
+            console.log(group);
             var unitsNeeded = (group.qty * group.ingredient.Relation.qty) / group.ingredient.Ingredient.maxPerUnit;
             group.unitsNeeded = Math.ceil(unitsNeeded);
           });
@@ -372,6 +373,8 @@
         
         makeIngredientGroups();
         calcQuantities();
+        
+        console.log($scope.ingredientGroups);
       }
     ])
     

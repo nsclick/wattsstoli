@@ -66,10 +66,9 @@ permission on your app, which PhoneGap requires.
   <gap:splash src="splash.png" />
   
   <!-- Facebook Connect Plugin -->
-  
   <gap:plugin name="com.phonegap.plugins.facebookconnect">
-      <param name="APP_ID" value="550303808397350" />
-      <param name="APP_NAME" value="WattsMobile" />
+    <param name="APP_ID" value="550303808397350" />
+    <param name="APP_NAME" value="WattsMobile" />
   </gap:plugin>
   
 

@@ -61,7 +61,7 @@
             id:           2,
             ingredientId: 2,
             drinkId:      1,
-            qty:          2
+            qty:          6
           },
           {
             id:           3,
@@ -73,7 +73,7 @@
             id:           4,
             ingredientId: 4,
             drinkId:      1,
-            qty:          30
+            qty:          150
           },
           {
             id:           5,
@@ -91,7 +91,7 @@
             id:           7,
             ingredientId: 7,
             drinkId:      2,
-            qty:          30
+            qty:          150
           },
           {
             id:           8,
@@ -109,7 +109,7 @@
             id:           10,
             ingredientId: 8,
             drinkId:      3,
-            qty:          30
+            qty:          150
           },
           {
             id:           11,
@@ -121,7 +121,7 @@
             id:           12,
             ingredientId: 10,
             drinkId:      4,
-            qty:          30
+            qty:          4
           },
           {
             id:           13,
@@ -133,13 +133,13 @@
             id:           14,
             ingredientId: 11,
             drinkId:      4,
-            qty:          30
+            qty:          150
           },
           {
             id:           15,
             ingredientId: 10,
             drinkId:      5,
-            qty:          30
+            qty:          4
           },
           {
             id:           16,
@@ -151,7 +151,7 @@
             id:           17,
             ingredientId: 14,
             drinkId:      5,
-            qty:          30
+            qty:          150
           }
         ];
         
@@ -189,100 +189,86 @@
           {
             id:         1,
             name:       'frutillas',
-            unit:       '',
-            unitPlural: '',
-            maxPerUnit: 60
+            unit:       'grs',
+            maxPerUnit: 1
           },
           {
             id:         2,
             name:       'arandanos',
-            unit:       '',
-            unitPlural: '',
-            maxPerUnit: 60
+            unit:       'unidades',
+            maxPerUnit: 1
           },
           {
             id:         3,
             name:       'vodka stolichnaya',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
+            unit:       'Botella 750ml',
             maxPerUnit: 750
           },
           {
             id:         4,
-            name:       'seleccion sabor guayaba',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
-            maxPerUnit: 750
+            name:       'nectar watts selección guayaba',
+            unit:       'Botella 1 Lt',
+            maxPerUnit: 1000
           },
           {
             id:         5,
             name:       'pepino',
-            unit:       '',
-            unitPlural: '',
-            maxPerUnit: 6
+            unit:       'rodajas',
+            maxPerUnit: 1
           },
           {
             id:         6,
             name:       'vodka stolichnaya blueberi',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
+            unit:       'Botella 750ml',
             maxPerUnit: 750
           },
           {
             id:         7,
-            name:       'seleccion sabor limonada',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
-            maxPerUnit: 750
+            name:       'nectar watts selección limonada',
+            unit:       'Caja 1 Lt',
+            maxPerUnit: 1000
           },
           {
             id:         8,
-            name:       'seleccion sabor frambuesa',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
-            maxPerUnit: 750
+            name:       'nectar watts selección frambuesa',
+            unit:       'Caja 1 Lt',
+            maxPerUnit: 1000
           },
           {
             id:         9,
             name:       'limon de pica',
-            unit:       '',
-            unitPlural: '',
-            maxPerUnit: 60
+            unit:       'gramos',
+            maxPerUnit: 1
           },
           {
             id:         10,
             name:       'kiwi',
-            unit:       '',
-            unitPlural: '',
-            maxPerUnit: 60
+            unit:       'rodajas',
+            maxPerUnit: 1
           },
           {
             id:         11,
-            name:       'seleccion sabor mango maracuya',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
-            maxPerUnit: 750
+            name:       'nectar watts selección mango maracuya',
+            unit:       'Caja 1 Lt',
+            maxPerUnit: 1000
           },
           {
             id:         12,
             name:       'limon',
-            unit:       '',
-            unitPlural: '',
-            maxPerUnit: 60
+            unit:       'gramos',
+            maxPerUnit: 1
           },
           {
             id:         13,
             name:       'vodka stolichnaya razberi',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
+            unit:       'Botella 750ml',
             maxPerUnit: 750
           },
           {
             id:         14,
-            name:       'seleccion sabor mandarina',
-            unit:       '1 Lt',
-            unitPlural: 'Lts',
-            maxPerUnit: 750
+            name:       'nectar watts selección mandarina',
+            unit:       'Caja 1 Lt',
+            maxPerUnit: 1000
             
           }
         ];

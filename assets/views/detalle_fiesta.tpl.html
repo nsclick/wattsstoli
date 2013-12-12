@@ -24,16 +24,23 @@
     <img data-ng-src="assets/images/{{images.size}}/titulo_usted_necesito_{{images.size}}.png"/>
   </div>
   
-  <div class="ly_party_table">
+  <div>
     
     <div data-ng-repeat="ingredientGroup in ingredientGroups">
       <div class="ly_party_table_row" data-ng-click="goToParty(party.id)">
-        <div class="ly_party_ig_container ly_party_table_col">
-          <span class="ly_party_ig_name">{{ingredientGroup.ingredient.Ingredient.name | uppercase}}</span>
-        <!--</div>
-        <div class="ly_party_ig_qty ly_party_table_col"> -->
-          <span class="ly_party_ig_qty">{{ingredientGroup.unitsNeeded | uppercase}}</span>
-        </div>
+          
+          <table class="ly_party_table">
+            <tbody>
+              <tr>
+                <td class="ly_party_ig_name">{{ingredientGroup.ingredient.Ingredient.name | uppercase}}</td>
+                <td rowspan="2" class="ly_party_ig_units_needed">{{ingredientGroup.unitsNeeded}}</td>
+              </tr>
+              <tr>
+                <td class="ly_party_ig_unit">{{ingredientGroup.ingredient.Ingredient.unit}}</td>
+              </tr>
+            </tbody>
+          </table>
+          
       </div>
     </div>
     
