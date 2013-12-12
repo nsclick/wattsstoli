@@ -126,6 +126,24 @@ a:active {
   text-align: left;
 }
 
+.ly_age_validate_box_label {
+  position: relative;
+}
+
+.ly_age_validate_age_cb_box {
+  position: absolute;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-color: #999;
+  border: 10px solid #fff;
+}
+
+.ly_age_validate_box_label.active .ly_age_validate_age_cb_box {
+  background-color: #2cd02c; 
+}
+
+/*
 .ly_age_validate_age_cb_box {
   position: absolute;
   display: inline-block;
@@ -144,17 +162,12 @@ a:active {
 	height: 20px;
   background-color: #00a800;
   box-shadow: inset 0px 0px 2px 2px #777;
-  
-  /*-webkit-transition: background-color .5s, box-shadow .5s;
-  -moz-transition: background-color .5s, box-shadow .5s;
-  -ms-transition: background-color .5s, box-shadow .5s;
-  transition: background-color .5s, box-shadow .5s;*/
 }
 
 .ly_age_validate_box_label.active .ly_age_validate_age_cb_box:after {
   background-color: #2cd02c;
   box-shadow: 0px 0px 2px 2px #ddd;
-}
+}*/
 
 .ly_age_validate_submit {
   margin-top: 30px;
