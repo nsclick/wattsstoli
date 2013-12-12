@@ -40,7 +40,7 @@ provides: [angular-facebook-phonegap]
         }
         
         // Phonegap deviceready event fired!, now load Facebook SDK
-        function onReady() {
+        (function onReady() {
           console.log('Ready!');
           if (!angular.isString(localSDKSrc)) {
             throw 'Missing localSDK setting pointing to the local javascript file with the Facebook SDK';
@@ -57,9 +57,9 @@ provides: [angular-facebook-phonegap]
             flags.sdk = true; // Set sdk global flag
           };
           document.getElementsByTagName('head')[0].appendChild(script); // // Fix for IE < 9, and yet supported by lattest browsers
-        };
+        })();
         
-        document.addEventListener("deviceready", onReady, false);
+        // document.addEventListener("deviceready", onReady, false);
        } 
       ])
       ;
