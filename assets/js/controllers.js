@@ -14,8 +14,12 @@
         };
         
         $scope.login = function() {
+          alert('clicked');
+          
           Facebook.login()
             .then(function (r) {
+              alert(r);
+              
               $scope.status = r;
             });
         };
