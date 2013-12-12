@@ -71,6 +71,13 @@ permission on your app, which PhoneGap requires.
       <param name="APP_NAME" value="WattsMobile" />
   </gap:plugin>
 
+  <!-- Origins -->
+  <access origin="facebook.com" />
+  <access origin="m.facebook.com" />
+  <access origin="graph.facebook.com" />
+  <access origin="api.facebook.com" />
+  <access origin="*.fbcdn.net" />
+  <access origin="*.akamaihd.net" />
     <!--
 Define access to external domains.
 
