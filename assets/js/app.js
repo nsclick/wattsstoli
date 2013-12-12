@@ -12,7 +12,6 @@
       'ngRoute',
       'ngTouch',
       'ngAnimate',
-      'facebook',
       'phonegap'
     ])
       
