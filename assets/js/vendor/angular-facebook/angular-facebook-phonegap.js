@@ -55,11 +55,10 @@ provides: [angular-facebook-phonegap]
           script.onload = function() {
             flags.sdk = true; // Set sdk global flag
           };
-          console.log('hr');
           document.getElementsByTagName('head')[0].appendChild(script); // // Fix for IE < 9, and yet supported by lattest browsers
         };
-        console.log('qweqw');
-        document.addEventListener("load", onReady, false);
+        
+        document.addEventListener("deviceredy", onReady, false);
        } 
       ])
       ;
