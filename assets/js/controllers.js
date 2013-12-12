@@ -7,13 +7,17 @@
     
     .controller('MainController', [
       '$scope',
-      // 'Facebook',
-      function($scope) {
+      'phonegap.load',
+      function($scope, PhonegapLoad) {
         $scope.images = {
           size: 320
         };
         
-       $scope.login = function() {
+        PhonegapLoad.ready.then(function (Cordova) {
+          console.log('Cordova: ', Cordova);
+        });
+        
+        $scope.login = function() {
           console.log('login');
           Facebook.login(function(r) {
               $scope.status = r;
