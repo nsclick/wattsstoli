@@ -7,9 +7,17 @@
     
     .controller('MainController', [
       '$scope',
-      function($scope) {
+      'Facebook',
+      function($scope, Facebook) {
         $scope.images = {
           size: 320
+        };
+        
+        $scope.login = function() {
+          Facebook.login()
+            .then(function (r) {
+              $scope.status = r;
+            });
         };
       }
     ])
