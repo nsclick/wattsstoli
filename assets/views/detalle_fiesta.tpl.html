@@ -14,7 +14,7 @@
   
   <div class="ly_party_drinks">
     <ul>
-      <li data-ng-repeat="drinkGroup in drinkGroups" class="ly_party_drink_name">
+      <li data-ng-repeat="drinkGroup in drinkGroups" class="ly_go_party_drink_name">
         <span>{{drinkGroup.qty}} {{drinkGroup.drink.name | uppercase}}</span>
       </li>
     </ul>
@@ -25,34 +25,30 @@
   </div>
   
   <div>
-    
-    <div data-ng-repeat="ingredientGroup in ingredientGroups">
-      <div class="ly_party_table_row" data-ng-click="goToParty(party.id)">
+    <table class="ly_party_table">
+      <tbody data-ng-repeat="ingredientGroup in ingredientGroups">
+        <tr data-ng-click="goToParty(party.id)">
+          <td class="ly_party_ig_name">
+            <span>
+              {{ingredientGroup.ingredient.Ingredient.name | uppercase}}
+              <br/>
+              {{ingredientGroup.ingredient.Ingredient.unit}}
+            </span>
+          </td>
           
-          <table class="ly_party_table">
-            <tbody>
-              <tr>
-                <td class="ly_party_ig_name">{{ingredientGroup.ingredient.Ingredient.name | uppercase}}</td>
-                <td rowspan="2" class="ly_party_ig_units_needed">{{ingredientGroup.unitsNeeded}}</td>
-              </tr>
-              <tr>
-                <td class="ly_party_ig_unit">{{ingredientGroup.ingredient.Ingredient.unit}}</td>
-              </tr>
-            </tbody>
-          </table>
-          
-      </div>
-    </div>
-    
+          <td class="ly_party_ig_units">
+            <span>{{ingredientGroup.unitsNeeded}}</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   
   <div class="ly_party_back">
-    <a href="#/mis_fiestas">
+    <a href="#/mis_fiestas" class="ly3_nav_btn">
       <span class="icon icon-arrow-left"></span>
       <span>Vuelve a tus eventos</span>
     </a>
   </div>
-  
-  
   
 </div>

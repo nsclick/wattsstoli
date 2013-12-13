@@ -355,11 +355,13 @@ a:active {
 
 .ly_party_drinks ul {
   list-style: none;
-  width: 280px;
+  width: 250px;
   margin-left: auto;
   margin-right: auto;
   font-size: 18px;
   font-size: 1.8rem;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .ly_party_drinks li {
@@ -367,45 +369,39 @@ a:active {
   width: 100%;
   background-color: #fff;
   color: #000;
-  padding-top: 5px;
-  padding-bottom: 5px;
   margin-top: 2px;
-}
-
-.ly_party_drink_name {
   border: 1px solid #e5b547;
 }
 
+.ly_party_drink_name {
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
 .ly_party_table {
-  display: table;
   width: 280px;
-  margin-top: 2px;
+  margin-top: 10px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
   color: #000;
-  border-collapse: collapse;
-  border-spacing: 0px;
-  border: 1px solid #e5b547;
-}
-
-.ly_party_table tbody {
-  background-color: #fff;
+  border-spacing: 2px 2px;
+  border-collapse: separate;
 }
 
 .ly_party_ig_name {
-  width: 200px;
-  vertical-align: middle;
+  background-color: #fff;
+  border: 1px solid #e5b547;
+  width: 190px;
   font-size: 18px;
   font-size: 1.8rem;
+  vertical-align: middle;
   text-align: left;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-left: 15px;
+  padding-left: 10px;
 }
 
-.ly_party_ig_units_needed {
+.ly_party_ig_units {
   vertical-align: middle;
   font-size: 18px;
   font-size: 1.8rem;
@@ -416,15 +412,15 @@ a:active {
   font-size: 2rem;
 }
 
-.ly_party_ig_unit {
-  font-size: 14px;
-  font-size: 1.4rem;
-  font-weight: bold;
+.ly_party_ig_units {
+  background-color: #fff;
+  border: 1px solid #e5b547;
+  width: 75px;
   vertical-align: middle;
-  text-align: left;
-  padding-left: 15px;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  font-size: 18px;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .ly_party_ig_qty  {
@@ -436,15 +432,14 @@ a:active {
 
 .ly_party_back {
   background-color: #dc9600;
+  width: 246px;
+  margin-left: auto;
+  margin-right: auto;
   color: #000;
   font-size: 18px;
   font-size: 1.8rem;
-  width: 280px;
-  margin-left: auto;
-  margin-right: auto;
   font-weight: bold;
-  vertical-align: middle;
-  margin-top: 4px;
+  margin-top: 2px;
   margin-bottom: 10px;
 }
 
@@ -680,7 +675,6 @@ a:active {
   margin-right: auto;
   font-size: 18px;
   font-size: 1.8rem;
-  font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -695,8 +689,8 @@ a:active {
 }
 
 .ly_go_party_drink_name {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 5px;
+  padding-bottom: 5px;
 }
  
 .ly_go_party_table {
@@ -717,7 +711,6 @@ a:active {
   width: 190px;
   font-size: 18px;
   font-size: 1.8rem;
-  font-weight: bold;
   vertical-align: middle;
   text-align: left;
   padding-left: 10px;
