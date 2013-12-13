@@ -71,10 +71,6 @@ permission on your app, which PhoneGap requires.
     <param name="APP_NAME" value="WattsMobile" />
   </gap:plugin>
   
-  <!-- ChildBrowser Plugin -->
-  <gap:plugin name="com.phonegap.plugins.childbrowser" />
-  
-
   <!-- Origins -->
   <access origin="facebook.com" />
   <access origin="m.facebook.com" />
