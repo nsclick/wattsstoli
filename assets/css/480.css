@@ -112,7 +112,7 @@ a:active {
   font-size: 22px;
   font-weight: bold;
   text-align: center;
-  border-radius: 8px;
+  border-radius: 0px;
   padding: 6px 0px;
 }
 
@@ -300,9 +300,8 @@ a:active {
 .ly_parties_go {
   background-color: #fff;
   vertical-align: middle;
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.8rem;
   border: 1px solid #e5b547;
 }
 
@@ -340,11 +339,12 @@ a:active {
   margin-right: auto;
   background-color: #fff;
   color: #000;
-  font-size: 22px;
+  font-size: 20px;
   font-size: 2.2rem;
-  font-weight: bold;
   vertical-align: middle;
   margin-top: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
   border: 1px solid #e5b547;
 }
 
@@ -358,9 +358,8 @@ a:active {
   width: 280px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 20px;
-  font-size: 2rem;
-  font-weight: bold;
+  font-size: 18px;
+  font-size: 1.8rem;
 }
 
 .ly_party_drinks li {
@@ -380,7 +379,7 @@ a:active {
 .ly_party_table {
   display: table;
   width: 280px;
-  margin-top: 10px;
+  margin-top: 2px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
@@ -396,11 +395,10 @@ a:active {
 }
 
 .ly_party_ig_name {
-  width: 220px;
+  width: 200px;
   vertical-align: middle;
   font-size: 18px;
   font-size: 1.8rem;
-  font-weight: bold;
   text-align: left;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -411,10 +409,11 @@ a:active {
   vertical-align: middle;
   font-size: 18px;
   font-size: 1.8rem;
-  font-weight: bold;
   text-align: left;
   padding-top: 5px;
   padding-bottom: 5px;
+  font-size: 20px;
+  font-size: 2rem;
 }
 
 .ly_party_ig_unit {
@@ -438,24 +437,25 @@ a:active {
 .ly_party_back {
   background-color: #dc9600;
   color: #000;
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   width: 280px;
   margin-left: auto;
   margin-right: auto;
   font-weight: bold;
   vertical-align: middle;
-  margin-top: 10px;
+  margin-top: 4px;
   margin-bottom: 10px;
-  padding: 10px 0px;
 }
 
 .ly_party_back a {
+  display: block;
   color: #000;
+  padding: 15px 0px;
 }
 
 .ly_party_back .icon {
-  top: 4px;
+  top: 2px;
   position: relative;
 }
 
@@ -623,8 +623,8 @@ a:active {
 
 .ly_check_party_drink_name {
   width: 190px;
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   vertical-align: middle;
   text-align: left;
@@ -645,11 +645,10 @@ a:active {
 }
 
 .ly_check_party_go {
-  width: 242px;
-  width: 272px;
+  width: 100%;
   background-color: #dc9600;
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   display: block;
   margin-left: auto;
@@ -679,8 +678,8 @@ a:active {
   width: 250px;
   margin-left: auto;
   margin-right: auto;
-  font-size: 20px;
-  font-size: 2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -691,14 +690,13 @@ a:active {
   width: 100%;
   background-color: #fff;
   color: #000;
-  padding-top: 5px;
-  padding-bottom: 5px;
   margin-top: 2px;
   border: 1px solid #e5b547;
 }
 
 .ly_go_party_drink_name {
-  
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
  
 .ly_go_party_table {
@@ -717,8 +715,8 @@ a:active {
   background-color: #fff;
   border: 1px solid #e5b547;
   width: 190px;
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   vertical-align: middle;
   text-align: left;
@@ -730,21 +728,22 @@ a:active {
   border: 1px solid #e5b547;
   width: 75px;
   vertical-align: middle;
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
   text-align: center;
 }
 
 .ly_go_party_name {
-  width: 240px;
+  width: 238px;
   font-size: 22px;
   font-size: 2.2rem;
   font-weight: bold;
   display: block;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   color: #000;
 }
 
@@ -758,18 +757,19 @@ a:active {
   font-size: 2.2rem;
   font-weight: 2.2rem;
   padding-left: 10px;
+  border-radius: 0px;
 }
 
 .ly_go_party_save {
   background-color: #cb6018;
-  width: 242px;
+  width: 246px;
   margin-left: auto;
   margin-right: auto;
   color: #000;
-  font-size: 22px;
-  font-size: 2.2rem;
+  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: bold;
-  margin-top: 5px;
+  margin-top: 2px;
   margin-bottom: 10px;
 }
 
@@ -878,8 +878,7 @@ a:active {
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
 }
-.carousel-control:hover,
-.carousel-control:focus {
+.carousel-control.active {
   color: #ffffff;
   text-decoration: none;
   opacity: 0.9;

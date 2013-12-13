@@ -24,6 +24,17 @@
         </tr>
       </thead>
       
+      <tfoot>
+        <tr>
+          <td colspan="3">
+            <a data-ng-click="goToParty()" class="ly_check_party_go" data-ng-class="{disabled: isDisabled()}">
+              <span>Ir al evento</span>
+              <span class="icon icon-arrow-right"></span>
+            </a>
+          </td>
+        </tr>
+      </tfoot>
+      
       <tbody data-ng-repeat="drinkGroup in drinkGroups">
         <tr>
           <td class="ly_check_party_drink_name">
@@ -41,13 +52,6 @@
       </tbody>
       
     </table>
-  </div>
-  
-  <div>
-    <a data-ng-click="goToParty()" class="ly_check_party_go" data-ng-class="{disabled: isDisabled()}">
-      <span>Ir al evento</span>
-      <span class="icon icon-arrow-right"></span>
-    </a>
   </div>
   
 </div>

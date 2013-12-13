@@ -184,7 +184,8 @@
     ])
     
     .directive('carouselControl', [
-      function () {
+      '$timeout',
+      function ($timeout) {
         return {
           restrict: 'A',
           require:  '^carousel',
@@ -192,11 +193,15 @@
             var direction = attrs.carouselControl;
             
             element.on('click', function (ev) {
+              element.addClass('active');
               if (direction == 'prev') {
                 ctrl.prev();
               } else {
                 ctrl.next();
               }
+              $timeout(function () {
+                element.removeClass('active');
+              }, 200);
             });
           }
         };
