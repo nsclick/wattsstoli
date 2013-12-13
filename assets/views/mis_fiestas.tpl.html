@@ -9,19 +9,21 @@
   <div class="ly_parties_title">
     <img data-ng-src="assets/images/{{images.size}}/titulo_mis_eventos_{{images.size}}.png" />
   </div>
-
-  <div class="ly_parties_table">
-    <div data-ng-repeat="party in parties" class="ly_parties_table_party" data-ng-class="{even: $even}">
-      <div class="ly_parties_table_row" data-ng-click="goToParty(party.id)" >
-        <div class="ly_parties_name ly_parties_table_col">
-          <span>{{party.name | uppercase}}</span>
-        </div>
-        <div class="ly_parties_go ly_parties_table_col">
-          <span class="icon icon-arrow-right"></span>
-          <!--<img data-ng-src="assets/images/{{images.size}}/btn_go_{{images.size}}.png"/> -->
-        </div>
-      </div>
-    </div>
+  
+  <div>
+    <table class="ly_parties_table">
+      <tbody data-ng-repeat="party in parties" class="ly_parties_party" data-ng-click="goToParty(party.id)">
+        <tr>
+          <td class="ly_parties_name" data-ng-class="{even: $even}">
+            <span>{{party.name | uppercase}}</span>
+          </td>
+          
+          <td class="ly_parties_go" data-ng-class="{even: $even}">
+            <span class="icon icon-arrow-right"></span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   </div>
   
   <div class="ly_parties_back">

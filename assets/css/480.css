@@ -81,6 +81,9 @@ input:focus, textarea:focus {
 
 img {
   outline: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
 }
 
 button {
@@ -273,7 +276,6 @@ a:active {
  * Mis Fiestas
  *************************************************************/
 .ly_parties_table {
-  display: table;
   width: 280px;
   margin-top: 10px;
   margin-left: auto;
@@ -285,42 +287,32 @@ a:active {
   border-collapse: separate;
 }
 
-.ly_parties_table_row {
-  display: table-row;
-  width: 300px;
-  margin-left: auto;
-  margin-right: auto;
+.ly_parties_name {
+  
 }
 
-.ly_parties_table_party.even .ly_parties_name,
-.ly_parties_table_party.even .ly_parties_go {
+.ly_parties_table .ly_parties_name.even,
+.ly_parties_table .ly_parties_go.even {
   background-color: #d8d9dd;
 }
 
-.ly_parties_table_col {
-  display: table-cell;
-  border-bottom: 5px solid rgba(0,0,0,0);
+.ly_parties_name,
+.ly_parties_go {
+  background-color: #fff;
+  vertical-align: middle;
+  font-size: 22px;
+  font-size: 2.2rem;
+  font-weight: bold;
+  border: 1px solid #e5b547;
 }
 
 .ly_parties_name {
   width: 190px;
-  background-color: #fff;
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-weight: bold;
-  vertical-align: middle;
   text-align: left;
   padding-left: 10px;
-  vertical-align: middle;
 }
 
 .ly_parties_go {
-  width: 75px;
-  background-color: #fff;
-  vertical-align: middle;
-  font-size: 22px;
-  font-size: 2.2rem;
-  font-weight: bold;
   text-align: center;
   vertical-align: middle;
 }
@@ -353,6 +345,7 @@ a:active {
   font-weight: bold;
   vertical-align: middle;
   margin-top: 20px;
+  border: 1px solid #e5b547;
 }
 
 .ly_party_title {
@@ -381,7 +374,7 @@ a:active {
 }
 
 .ly_party_drink_name {
-  
+  border: 1px solid #e5b547;
 }
 
 .ly_party_table {
@@ -395,6 +388,7 @@ a:active {
   color: #000;
   border-collapse: collapse;
   border-spacing: 0px;
+  border: 1px solid #e5b547;
 }
 
 .ly_party_table tbody {
@@ -476,6 +470,10 @@ a:active {
 
 .ly_create_party_drink_box {
   padding-top: 60px;
+}
+
+.ly_create_party_drink_box img {
+  pointer-events: none
 }
 
 .ly_create_party_drink_title {
@@ -567,7 +565,7 @@ a:active {
 }
 
 .ly_create_party_qty div {
-  font-size: 2rem;
+  font-size: 3.5rem;
 }
 
 .ly_create_party_go.disabled a {
@@ -676,6 +674,33 @@ a:active {
 /*************************************************************
  * Go Fiesta
  *************************************************************/
+.ly_go_party_drinks ul {
+  list-style: none;
+  width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 20px;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.ly_go_party_drinks li {
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  color: #000;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 2px;
+  border: 1px solid #e5b547;
+}
+
+.ly_go_party_drink_name {
+  
+}
+ 
 .ly_go_party_table {
   width: 280px;
   margin-top: 10px;

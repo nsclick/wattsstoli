@@ -83,7 +83,8 @@
             '$timeout',
             function ($scope, $timeout) {
               var items   = [],
-                  current = 0; 
+                  current = 0,
+                  self    = this;
               
               function cleanItem (item, removeActive) {
                 removeActive = !angular.isUndefined(removeActive) ? removeActive : true;
@@ -152,6 +153,16 @@
                     })
                   });
                 });
+              };
+              
+              $scope.swipeLeft = function () {
+                console.log('left');
+                self.next();
+              };
+              
+              $scope.swipeRight = function () {
+                console.log('right');
+                self.prev();
               };
               
             }

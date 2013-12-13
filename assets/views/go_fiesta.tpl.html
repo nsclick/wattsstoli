@@ -10,6 +10,18 @@
     </a>
   </div>
   
+  <div class="ly_go_party_title">
+    <img data-ng-src="assets/images/{{images.size}}/titulo_para_armar_{{images.size}}.png" />
+  </div>
+  
+  <div class="ly_go_party_drinks">
+    <ul>
+      <li data-ng-repeat="drinkGroup in drinkGroups" class="ly_go_party_drink_name">
+        <span>{{drinkGroup.qty}} {{drinkGroup.drink.name | uppercase}}</span>
+      </li>
+    </ul>
+  </div>
+  
   <div>
     <img data-ng-src="assets/images/{{images.size}}/titulo_vas_necesitar_{{images.size}}.png"/>
   </div>
